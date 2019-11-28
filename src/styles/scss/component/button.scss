@@ -1,0 +1,84 @@
+.ekiio-video-player button {
+  background: none;
+  border: none;
+  color: inherit;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0 6px;
+
+  overflow: visible; // IE8
+  font-size: inherit; // IE in general. WTF.
+  line-height: inherit;
+  text-transform: none;
+  text-decoration: none;
+  transition: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &::before {
+    text-shadow: 0 0 1px white;
+  }
+
+  &.tool-tip {
+    position: relative;
+    display: inline-block;
+
+    & .tool-tip-text {
+      visibility: hidden;
+      background-color: rgba(0, 0, 0, 0.78);
+      color: #fff;
+      text-align: center;
+      padding: 5px 10px;
+      border-radius: 3px;
+      position: absolute;
+      z-index: 1;
+      font-family: 'Roboto', serif;
+      font-size: 1.4rem;
+      line-height: 1.15;
+      white-space: nowrap;
+
+      &.top-center {
+        bottom: 130%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: rgba(0, 0, 0, 0.78) transparent transparent transparent;
+        }
+      }
+
+      &.top-left {
+        bottom: 130%;
+        right: 0;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          right: 13px;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: rgba(0, 0, 0, 0.78) transparent transparent transparent;
+        }
+      }
+
+    }
+  }
+}
+
+.ekiio-video-player.video-user-active button {
+  &:hover {
+    .tool-tip-text {
+      visibility: visible;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.ekiio-video-player {
+  .video-volume-menu { //wrap of volume control
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    .video-volume-button {
+      @extend .ekiio-video-icon;
+      @extend .ekiio-video-icon-volume-up;
+      &.video-vol-0 {
+        @extend .ekiio-video-icon-volume-mute;
+      }
+      &.video-vol-1 {
+        @extend .ekiio-video-icon-volume-down;
+      }
+      &.video-vol-2 {
+        @extend .ekiio-video-icon-volume-down;
+      }
+      &.video-vol-muted {
+        @extend .ekiio-video-icon-volume-off;
+      }
+    }
+    .video-volume-bar {
+      width: 0;
+      height: 0.6em;
+      opacity: 0;
+      transition: all 0.4s;
+      background: hsla(0, 0%, 80%, .5);
+      .video-volume-level { //current volume in bar
+        width: 100%;
+        height: 100%;
+        background-color: white;
+      }
+    }
+
+    //when hover or click to focus
+    &:hover, &.video-vol-slider-active  {
+      .video-volume-bar {
+        width: 6em;
+        opacity: 1;
+      }
+    }
+  }
+
+}
+

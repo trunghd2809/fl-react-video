@@ -1,0 +1,9 @@
+.ekiio-video-player {
+  .video-play-toggle-button {
+    @extend .ekiio-video-icon;
+    @extend .ekiio-video-icon-pause;
+    &.video-paused {
+      @extend .ekiio-video-icon-play;
+    }
+  }
+}

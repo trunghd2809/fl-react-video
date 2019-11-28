@@ -1,0 +1,13 @@
+.ekiio-video-player {
+  .video-big-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: $video-z-index + 2;
+    @extend .ekiio-video-icon;
+    @extend .ekiio-video-icon-play-circle;
+    font-size: 64px;
+
+  }
+}

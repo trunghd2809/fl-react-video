@@ -1,0 +1,49 @@
+.ekiio-video-player {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  &.video-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100vw !important;
+    padding-bottom: 100vh !important;
+  }
+  box-sizing: border-box;
+  overflow: hidden;
+  font-size: 10px;
+  background: black;
+  color: white;
+  font-family: Roboto, serif;
+  outline: none;
+  user-select: none;
+  &:-moz-full-screen {
+    position: absolute;
+  }
+  &:-webkit-full-screen {
+    background-color: black;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  //all elements inherit border-box sizing
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: $video-z-index;
+  }
+  &.video-user-inactive {
+    cursor: none
+  }
+}
+

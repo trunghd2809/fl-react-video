@@ -1,0 +1,26 @@
+.ekiio-video-player {
+  .video-settings-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: red;
+    width: 80%;
+    height: 20%;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  .video-setting-popup-active {
+    opacity: 1;
+    .big-setting-button {
+      background: black;
+      @extend .ekiio-video-icon;
+      @extend .ekiio-video-icon-setting;
+      font-size: 64px;
+      transition: transform 1s;
+      transform-origin: center;
+      transform: rotate(180deg);
+
+    }
+  }
+}
