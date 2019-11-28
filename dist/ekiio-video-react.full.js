@@ -6,226 +6,15 @@
 
 	var React__default = 'default' in React ? React['default'] : React;
 
-	var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+	var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
 	function unwrapExports (x) {
-		return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
+		return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x.default : x;
 	}
 
 	function createCommonjsModule(fn, module) {
 		return module = { exports: {} }, fn(module, module.exports), module.exports;
 	}
-
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
-	  return typeof obj;
-	} : function (obj) {
-	  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-	};
-
-	var classCallCheck = function (instance, Constructor) {
-	  if (!(instance instanceof Constructor)) {
-	    throw new TypeError("Cannot call a class as a function");
-	  }
-	};
-
-	var createClass = function () {
-	  function defineProperties(target, props) {
-	    for (var i = 0; i < props.length; i++) {
-	      var descriptor = props[i];
-	      descriptor.enumerable = descriptor.enumerable || false;
-	      descriptor.configurable = true;
-	      if ("value" in descriptor) descriptor.writable = true;
-	      Object.defineProperty(target, descriptor.key, descriptor);
-	    }
-	  }
-
-	  return function (Constructor, protoProps, staticProps) {
-	    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-	    if (staticProps) defineProperties(Constructor, staticProps);
-	    return Constructor;
-	  };
-	}();
-
-	var _extends = Object.assign || function (target) {
-	  for (var i = 1; i < arguments.length; i++) {
-	    var source = arguments[i];
-
-	    for (var key in source) {
-	      if (Object.prototype.hasOwnProperty.call(source, key)) {
-	        target[key] = source[key];
-	      }
-	    }
-	  }
-
-	  return target;
-	};
-
-	var inherits = function (subClass, superClass) {
-	  if (typeof superClass !== "function" && superClass !== null) {
-	    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-	  }
-
-	  subClass.prototype = Object.create(superClass && superClass.prototype, {
-	    constructor: {
-	      value: subClass,
-	      enumerable: false,
-	      writable: true,
-	      configurable: true
-	    }
-	  });
-	  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-	};
-
-	var possibleConstructorReturn = function (self, call) {
-	  if (!self) {
-	    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-	  }
-
-	  return call && (typeof call === "object" || typeof call === "function") ? call : self;
-	};
-
-	var toConsumableArray = function (arr) {
-	  if (Array.isArray(arr)) {
-	    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
-
-	    return arr2;
-	  } else {
-	    return Array.from(arr);
-	  }
-	};
-
-	var reactIs_production_min = createCommonjsModule(function (module, exports) {
-	  Object.defineProperty(exports, "__esModule", { value: !0 });
-	  var b = "function" === typeof Symbol && Symbol.for,
-	      c = b ? Symbol.for("react.element") : 60103,
-	      d = b ? Symbol.for("react.portal") : 60106,
-	      e = b ? Symbol.for("react.fragment") : 60107,
-	      f = b ? Symbol.for("react.strict_mode") : 60108,
-	      g = b ? Symbol.for("react.profiler") : 60114,
-	      h = b ? Symbol.for("react.provider") : 60109,
-	      k = b ? Symbol.for("react.context") : 60110,
-	      l = b ? Symbol.for("react.async_mode") : 60111,
-	      m = b ? Symbol.for("react.concurrent_mode") : 60111,
-	      n = b ? Symbol.for("react.forward_ref") : 60112,
-	      p = b ? Symbol.for("react.suspense") : 60113,
-	      q = b ? Symbol.for("react.suspense_list") : 60120,
-	      r = b ? Symbol.for("react.memo") : 60115,
-	      t = b ? Symbol.for("react.lazy") : 60116,
-	      v = b ? Symbol.for("react.fundamental") : 60117,
-	      w = b ? Symbol.for("react.responder") : 60118,
-	      x = b ? Symbol.for("react.scope") : 60119;function y(a) {
-	    if ("object" === (typeof a === 'undefined' ? 'undefined' : _typeof(a)) && null !== a) {
-	      var u = a.$$typeof;switch (u) {case c:
-	          switch (a = a.type, a) {case l:case m:case e:case g:case f:case p:
-	              return a;default:
-	              switch (a = a && a.$$typeof, a) {case k:case n:case t:case r:case h:
-	                  return a;default:
-	                  return u;}}case d:
-	          return u;}
-	    }
-	  }function z(a) {
-	    return y(a) === m;
-	  }
-	  exports.typeOf = y;exports.AsyncMode = l;exports.ConcurrentMode = m;exports.ContextConsumer = k;exports.ContextProvider = h;exports.Element = c;exports.ForwardRef = n;exports.Fragment = e;exports.Lazy = t;exports.Memo = r;exports.Portal = d;exports.Profiler = g;exports.StrictMode = f;exports.Suspense = p;
-	  exports.isValidElementType = function (a) {
-	    return "string" === typeof a || "function" === typeof a || a === e || a === m || a === g || a === f || a === p || a === q || "object" === (typeof a === 'undefined' ? 'undefined' : _typeof(a)) && null !== a && (a.$$typeof === t || a.$$typeof === r || a.$$typeof === h || a.$$typeof === k || a.$$typeof === n || a.$$typeof === v || a.$$typeof === w || a.$$typeof === x);
-	  };exports.isAsyncMode = function (a) {
-	    return z(a) || y(a) === l;
-	  };exports.isConcurrentMode = z;exports.isContextConsumer = function (a) {
-	    return y(a) === k;
-	  };exports.isContextProvider = function (a) {
-	    return y(a) === h;
-	  };
-	  exports.isElement = function (a) {
-	    return "object" === (typeof a === 'undefined' ? 'undefined' : _typeof(a)) && null !== a && a.$$typeof === c;
-	  };exports.isForwardRef = function (a) {
-	    return y(a) === n;
-	  };exports.isFragment = function (a) {
-	    return y(a) === e;
-	  };exports.isLazy = function (a) {
-	    return y(a) === t;
-	  };exports.isMemo = function (a) {
-	    return y(a) === r;
-	  };exports.isPortal = function (a) {
-	    return y(a) === d;
-	  };exports.isProfiler = function (a) {
-	    return y(a) === g;
-	  };exports.isStrictMode = function (a) {
-	    return y(a) === f;
-	  };exports.isSuspense = function (a) {
-	    return y(a) === p;
-	  };
-	});
-
-	unwrapExports(reactIs_production_min);
-	var reactIs_production_min_1 = reactIs_production_min.typeOf;
-	var reactIs_production_min_2 = reactIs_production_min.AsyncMode;
-	var reactIs_production_min_3 = reactIs_production_min.ConcurrentMode;
-	var reactIs_production_min_4 = reactIs_production_min.ContextConsumer;
-	var reactIs_production_min_5 = reactIs_production_min.ContextProvider;
-	var reactIs_production_min_6 = reactIs_production_min.Element;
-	var reactIs_production_min_7 = reactIs_production_min.ForwardRef;
-	var reactIs_production_min_8 = reactIs_production_min.Fragment;
-	var reactIs_production_min_9 = reactIs_production_min.Lazy;
-	var reactIs_production_min_10 = reactIs_production_min.Memo;
-	var reactIs_production_min_11 = reactIs_production_min.Portal;
-	var reactIs_production_min_12 = reactIs_production_min.Profiler;
-	var reactIs_production_min_13 = reactIs_production_min.StrictMode;
-	var reactIs_production_min_14 = reactIs_production_min.Suspense;
-	var reactIs_production_min_15 = reactIs_production_min.isValidElementType;
-	var reactIs_production_min_16 = reactIs_production_min.isAsyncMode;
-	var reactIs_production_min_17 = reactIs_production_min.isConcurrentMode;
-	var reactIs_production_min_18 = reactIs_production_min.isContextConsumer;
-	var reactIs_production_min_19 = reactIs_production_min.isContextProvider;
-	var reactIs_production_min_20 = reactIs_production_min.isElement;
-	var reactIs_production_min_21 = reactIs_production_min.isForwardRef;
-	var reactIs_production_min_22 = reactIs_production_min.isFragment;
-	var reactIs_production_min_23 = reactIs_production_min.isLazy;
-	var reactIs_production_min_24 = reactIs_production_min.isMemo;
-	var reactIs_production_min_25 = reactIs_production_min.isPortal;
-	var reactIs_production_min_26 = reactIs_production_min.isProfiler;
-	var reactIs_production_min_27 = reactIs_production_min.isStrictMode;
-	var reactIs_production_min_28 = reactIs_production_min.isSuspense;
-
-	var reactIs_development = createCommonjsModule(function (module, exports) {
-	});
-
-	unwrapExports(reactIs_development);
-	var reactIs_development_1 = reactIs_development.typeOf;
-	var reactIs_development_2 = reactIs_development.AsyncMode;
-	var reactIs_development_3 = reactIs_development.ConcurrentMode;
-	var reactIs_development_4 = reactIs_development.ContextConsumer;
-	var reactIs_development_5 = reactIs_development.ContextProvider;
-	var reactIs_development_6 = reactIs_development.Element;
-	var reactIs_development_7 = reactIs_development.ForwardRef;
-	var reactIs_development_8 = reactIs_development.Fragment;
-	var reactIs_development_9 = reactIs_development.Lazy;
-	var reactIs_development_10 = reactIs_development.Memo;
-	var reactIs_development_11 = reactIs_development.Portal;
-	var reactIs_development_12 = reactIs_development.Profiler;
-	var reactIs_development_13 = reactIs_development.StrictMode;
-	var reactIs_development_14 = reactIs_development.Suspense;
-	var reactIs_development_15 = reactIs_development.isValidElementType;
-	var reactIs_development_16 = reactIs_development.isAsyncMode;
-	var reactIs_development_17 = reactIs_development.isConcurrentMode;
-	var reactIs_development_18 = reactIs_development.isContextConsumer;
-	var reactIs_development_19 = reactIs_development.isContextProvider;
-	var reactIs_development_20 = reactIs_development.isElement;
-	var reactIs_development_21 = reactIs_development.isForwardRef;
-	var reactIs_development_22 = reactIs_development.isFragment;
-	var reactIs_development_23 = reactIs_development.isLazy;
-	var reactIs_development_24 = reactIs_development.isMemo;
-	var reactIs_development_25 = reactIs_development.isPortal;
-	var reactIs_development_26 = reactIs_development.isProfiler;
-	var reactIs_development_27 = reactIs_development.isStrictMode;
-	var reactIs_development_28 = reactIs_development.isSuspense;
-
-	var reactIs = createCommonjsModule(function (module) {
-
-	  {
-	    module.exports = reactIs_production_min;
-	  }
-	});
 
 	/*
 	object-assign
@@ -327,11 +116,85 @@
 
 	var ReactPropTypesSecret_1 = ReactPropTypesSecret;
 
-	var has$1 = Function.call.bind(Object.prototype.hasOwnProperty);
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
+	  return typeof obj;
+	} : function (obj) {
+	  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+	};
+
+	var classCallCheck = function (instance, Constructor) {
+	  if (!(instance instanceof Constructor)) {
+	    throw new TypeError("Cannot call a class as a function");
+	  }
+	};
+
+	var createClass = function () {
+	  function defineProperties(target, props) {
+	    for (var i = 0; i < props.length; i++) {
+	      var descriptor = props[i];
+	      descriptor.enumerable = descriptor.enumerable || false;
+	      descriptor.configurable = true;
+	      if ("value" in descriptor) descriptor.writable = true;
+	      Object.defineProperty(target, descriptor.key, descriptor);
+	    }
+	  }
+
+	  return function (Constructor, protoProps, staticProps) {
+	    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+	    if (staticProps) defineProperties(Constructor, staticProps);
+	    return Constructor;
+	  };
+	}();
+
+	var _extends = Object.assign || function (target) {
+	  for (var i = 1; i < arguments.length; i++) {
+	    var source = arguments[i];
+
+	    for (var key in source) {
+	      if (Object.prototype.hasOwnProperty.call(source, key)) {
+	        target[key] = source[key];
+	      }
+	    }
+	  }
+
+	  return target;
+	};
+
+	var inherits = function (subClass, superClass) {
+	  if (typeof superClass !== "function" && superClass !== null) {
+	    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+	  }
+
+	  subClass.prototype = Object.create(superClass && superClass.prototype, {
+	    constructor: {
+	      value: subClass,
+	      enumerable: false,
+	      writable: true,
+	      configurable: true
+	    }
+	  });
+	  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+	};
+
+	var possibleConstructorReturn = function (self, call) {
+	  if (!self) {
+	    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+	  }
+
+	  return call && (typeof call === "object" || typeof call === "function") ? call : self;
+	};
+
+	var toConsumableArray = function (arr) {
+	  if (Array.isArray(arr)) {
+	    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
+
+	    return arr2;
+	  } else {
+	    return Array.from(arr);
+	  }
+	};
 
 	function emptyFunction() {}
-	function emptyFunctionWithReset() {}
-	emptyFunctionWithReset.resetWarningCache = emptyFunction;
 
 	var factoryWithThrowingShims = function factoryWithThrowingShims() {
 	  function shim(props, propName, componentName, location, propFullName, secret) {
@@ -359,19 +222,16 @@
 	    any: shim,
 	    arrayOf: getShim,
 	    element: shim,
-	    elementType: shim,
 	    instanceOf: getShim,
 	    node: shim,
 	    objectOf: getShim,
 	    oneOf: getShim,
 	    oneOfType: getShim,
 	    shape: getShim,
-	    exact: getShim,
-
-	    checkPropTypes: emptyFunctionWithReset,
-	    resetWarningCache: emptyFunction
+	    exact: getShim
 	  };
 
+	  ReactPropTypes.checkPropTypes = emptyFunction;
 	  ReactPropTypes.PropTypes = ReactPropTypes;
 
 	  return ReactPropTypes;
@@ -540,7 +400,7 @@
 	  var _ref2;
 
 	  if (typeof preloadedState === 'function' && typeof enhancer === 'function' || typeof enhancer === 'function' && typeof arguments[3] === 'function') {
-	    throw new Error('It looks like you are passing several store enhancers to ' + 'createStore(). This is not supported. Instead, compose them ' + 'together to a single function.');
+	    throw new Error('It looks like you are passing several store enhancers to ' + 'createStore(). This is not supported. Instead, compose them ' + 'together to a single function');
 	  }
 
 	  if (typeof preloadedState === 'function' && typeof enhancer === 'undefined') {
@@ -565,13 +425,6 @@
 	  var currentListeners = [];
 	  var nextListeners = currentListeners;
 	  var isDispatching = false;
-	  /**
-	   * This makes a shallow copy of currentListeners so we can use
-	   * nextListeners as a temporary list while dispatching.
-	   *
-	   * This prevents any bugs around consumers calling
-	   * subscribe/unsubscribe in the middle of a dispatch.
-	   */
 
 	  function ensureCanMutateNextListeners() {
 	    if (nextListeners === currentListeners) {
@@ -713,11 +566,7 @@
 	      throw new Error('Expected the nextReducer to be a function.');
 	    }
 
-	    currentReducer = nextReducer; // This action has a similiar effect to ActionTypes.INIT.
-	    // Any reducers that existed in both the new and old rootReducer
-	    // will receive the previous state. This effectively populates
-	    // the new state tree with any relevant data from the old one.
-
+	    currentReducer = nextReducer;
 	    dispatch({
 	      type: ActionTypes.REPLACE
 	    });
