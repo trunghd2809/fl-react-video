@@ -1,7 +1,7 @@
 {
-  "name": "ekiio-video-react",
+  "name": "fl-video-react",
   "version": "3.0.3",
-  "description": "specific Ekiio video player for Ekiio.com",
+  "description": "Video player for reactjs",
   "main": "lib/index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development ./docs/index.js --host 0.0.0.0 --open",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dulx96/ekiio-video-react.git"
+    "url": "https://github.com/trunghd2809/fl-react-video"
   },
   "keywords": [
     "react",
@@ -21,9 +21,9 @@
   "author": "DU LX",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dulx96/ekiio-video-react/issues"
+    "url": "https://github.com/trunghd2809/fl-react-video/issues"
   },
-  "homepage": "https://github.com/dulx96/ekiio-video-react#readme",
+  "homepage": "hhttps://github.com/trunghd2809/fl-react-video#readme",
   "peerDependencies": {
     "react": "^15.0e.0 || ^16.0.0",
     "react-dom": "^15.0.0 || ^16.0.0"
